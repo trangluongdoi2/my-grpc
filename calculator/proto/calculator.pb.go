@@ -122,14 +122,15 @@ var File_calculator_proto protoreflect.FileDescriptor
 const file_calculator_proto_rawDesc = "" +
 	"\n" +
 	"\x10calculator.proto\x12\n" +
-	"calculator\"G\n" +
+	"calculator\x1a\fprimes.proto\"G\n" +
 	"\x11CalculatorRequest\x12\x18\n" +
 	"\anumber1\x18\x01 \x01(\x03R\anumber1\x12\x18\n" +
 	"\anumber2\x18\x02 \x01(\x03R\anumber2\"&\n" +
 	"\x12CalculatorResponse\x12\x10\n" +
-	"\x03sum\x18\x01 \x01(\x03R\x03sum2Y\n" +
+	"\x03sum\x18\x01 \x01(\x03R\x03sum2\x9c\x01\n" +
 	"\x11CalculatorService\x12D\n" +
-	"\x03Sum\x12\x1d.calculator.CalculatorRequest\x1a\x1e.calculator.CalculatorResponseB4Z2github.com/trangluongdoi2/my-grpc/calculator/protob\x06proto3"
+	"\x03Sum\x12\x1d.calculator.CalculatorRequest\x1a\x1e.calculator.CalculatorResponse\x12A\n" +
+	"\x06Primes\x12\x19.calculator.PrimesRequest\x1a\x1a.calculator.PrimesResponse0\x01B4Z2github.com/trangluongdoi2/my-grpc/calculator/protob\x06proto3"
 
 var (
 	file_calculator_proto_rawDescOnce sync.Once
@@ -147,12 +148,16 @@ var file_calculator_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_calculator_proto_goTypes = []any{
 	(*CalculatorRequest)(nil),  // 0: calculator.CalculatorRequest
 	(*CalculatorResponse)(nil), // 1: calculator.CalculatorResponse
+	(*PrimesRequest)(nil),      // 2: calculator.PrimesRequest
+	(*PrimesResponse)(nil),     // 3: calculator.PrimesResponse
 }
 var file_calculator_proto_depIdxs = []int32{
 	0, // 0: calculator.CalculatorService.Sum:input_type -> calculator.CalculatorRequest
-	1, // 1: calculator.CalculatorService.Sum:output_type -> calculator.CalculatorResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	2, // 1: calculator.CalculatorService.Primes:input_type -> calculator.PrimesRequest
+	1, // 2: calculator.CalculatorService.Sum:output_type -> calculator.CalculatorResponse
+	3, // 3: calculator.CalculatorService.Primes:output_type -> calculator.PrimesResponse
+	2, // [2:4] is the sub-list for method output_type
+	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -163,6 +168,7 @@ func file_calculator_proto_init() {
 	if File_calculator_proto != nil {
 		return
 	}
+	file_primes_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
