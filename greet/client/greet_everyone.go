@@ -56,5 +56,4 @@ func doGreetEveryone(c pb.GreetServiceClient) {
 	}()
 
 	<-waitc
-
 }

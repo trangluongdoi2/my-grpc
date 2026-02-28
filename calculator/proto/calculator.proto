@@ -5,6 +5,7 @@ package calculator;
 import "primes.proto";
 import "avg.proto";
 import "max.proto";
+import "sqrt.proto";
 
 option go_package = "github.com/trangluongdoi2/my-grpc/calculator/proto";
 
@@ -22,4 +23,5 @@ service CalculatorService {
   rpc Primes(PrimesRequest) returns (stream PrimesResponse);
   rpc Avg(stream AvgRequest) returns (AvgResponse);
   rpc Max(stream MaxRequest) returns (stream MaxResponse);
+  rpc Sqrt(SqrtRequest) returns (SqrtResponse);
 }

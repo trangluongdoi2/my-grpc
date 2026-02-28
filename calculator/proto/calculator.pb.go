@@ -122,17 +122,19 @@ var File_calculator_proto protoreflect.FileDescriptor
 const file_calculator_proto_rawDesc = "" +
 	"\n" +
 	"\x10calculator.proto\x12\n" +
-	"calculator\x1a\fprimes.proto\x1a\tavg.proto\x1a\tmax.proto\"G\n" +
+	"calculator\x1a\fprimes.proto\x1a\tavg.proto\x1a\tmax.proto\x1a\n" +
+	"sqrt.proto\"G\n" +
 	"\x11CalculatorRequest\x12\x18\n" +
 	"\anumber1\x18\x01 \x01(\x03R\anumber1\x12\x18\n" +
 	"\anumber2\x18\x02 \x01(\x03R\anumber2\"&\n" +
 	"\x12CalculatorResponse\x12\x10\n" +
-	"\x03sum\x18\x01 \x01(\x03R\x03sum2\x92\x02\n" +
+	"\x03sum\x18\x01 \x01(\x03R\x03sum2\xcd\x02\n" +
 	"\x11CalculatorService\x12D\n" +
 	"\x03Sum\x12\x1d.calculator.CalculatorRequest\x1a\x1e.calculator.CalculatorResponse\x12A\n" +
 	"\x06Primes\x12\x19.calculator.PrimesRequest\x1a\x1a.calculator.PrimesResponse0\x01\x128\n" +
 	"\x03Avg\x12\x16.calculator.AvgRequest\x1a\x17.calculator.AvgResponse(\x01\x12:\n" +
-	"\x03Max\x12\x16.calculator.MaxRequest\x1a\x17.calculator.MaxResponse(\x010\x01B4Z2github.com/trangluongdoi2/my-grpc/calculator/protob\x06proto3"
+	"\x03Max\x12\x16.calculator.MaxRequest\x1a\x17.calculator.MaxResponse(\x010\x01\x129\n" +
+	"\x04Sqrt\x12\x17.calculator.SqrtRequest\x1a\x18.calculator.SqrtResponseB4Z2github.com/trangluongdoi2/my-grpc/calculator/protob\x06proto3"
 
 var (
 	file_calculator_proto_rawDescOnce sync.Once
@@ -153,21 +155,25 @@ var file_calculator_proto_goTypes = []any{
 	(*PrimesRequest)(nil),      // 2: calculator.PrimesRequest
 	(*AvgRequest)(nil),         // 3: calculator.AvgRequest
 	(*MaxRequest)(nil),         // 4: calculator.MaxRequest
-	(*PrimesResponse)(nil),     // 5: calculator.PrimesResponse
-	(*AvgResponse)(nil),        // 6: calculator.AvgResponse
-	(*MaxResponse)(nil),        // 7: calculator.MaxResponse
+	(*SqrtRequest)(nil),        // 5: calculator.SqrtRequest
+	(*PrimesResponse)(nil),     // 6: calculator.PrimesResponse
+	(*AvgResponse)(nil),        // 7: calculator.AvgResponse
+	(*MaxResponse)(nil),        // 8: calculator.MaxResponse
+	(*SqrtResponse)(nil),       // 9: calculator.SqrtResponse
 }
 var file_calculator_proto_depIdxs = []int32{
 	0, // 0: calculator.CalculatorService.Sum:input_type -> calculator.CalculatorRequest
 	2, // 1: calculator.CalculatorService.Primes:input_type -> calculator.PrimesRequest
 	3, // 2: calculator.CalculatorService.Avg:input_type -> calculator.AvgRequest
 	4, // 3: calculator.CalculatorService.Max:input_type -> calculator.MaxRequest
-	1, // 4: calculator.CalculatorService.Sum:output_type -> calculator.CalculatorResponse
-	5, // 5: calculator.CalculatorService.Primes:output_type -> calculator.PrimesResponse
-	6, // 6: calculator.CalculatorService.Avg:output_type -> calculator.AvgResponse
-	7, // 7: calculator.CalculatorService.Max:output_type -> calculator.MaxResponse
-	4, // [4:8] is the sub-list for method output_type
-	0, // [0:4] is the sub-list for method input_type
+	5, // 4: calculator.CalculatorService.Sqrt:input_type -> calculator.SqrtRequest
+	1, // 5: calculator.CalculatorService.Sum:output_type -> calculator.CalculatorResponse
+	6, // 6: calculator.CalculatorService.Primes:output_type -> calculator.PrimesResponse
+	7, // 7: calculator.CalculatorService.Avg:output_type -> calculator.AvgResponse
+	8, // 8: calculator.CalculatorService.Max:output_type -> calculator.MaxResponse
+	9, // 9: calculator.CalculatorService.Sqrt:output_type -> calculator.SqrtResponse
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -181,6 +187,7 @@ func file_calculator_proto_init() {
 	file_primes_proto_init()
 	file_avg_proto_init()
 	file_max_proto_init()
+	file_sqrt_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
