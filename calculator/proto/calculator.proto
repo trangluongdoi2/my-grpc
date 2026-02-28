@@ -3,6 +3,7 @@ syntax = "proto3";
 package calculator;
 
 import "primes.proto";
+import "avg.proto";
 
 option go_package = "github.com/trangluongdoi2/my-grpc/calculator/proto";
 
@@ -18,4 +19,5 @@ message CalculatorResponse {
 service CalculatorService {
   rpc Sum(CalculatorRequest) returns (CalculatorResponse);
   rpc Primes(PrimesRequest) returns (stream PrimesResponse);
+  rpc Avg(stream AvgRequest) returns (AvgResponse);
 }
