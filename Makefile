@@ -8,8 +8,8 @@ SERVER_BIN = ${SERVER_DIR}
 CLIENT_BIN = ${CLIENT_DIR}
 PACKAGE = $(shell head -1 go.mod | awk '{print $$2}')
 
-.PHONY: greet calculator all
-project := greet calculator
+.PHONY: greet calculator blog all
+project := greet calculator blog
 
 all: $(project) ## Generate Pbs and build
 
