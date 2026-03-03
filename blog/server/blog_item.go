@@ -2,14 +2,14 @@ package main
 
 import (
 	pb "github.com/trangluongdoi2/my-grpc/blog/proto"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/v2/bson"
 )
 
 type BlogItem struct {
-	ID       primitive.ObjectID `bson:"_id,omitempty"`
-	AuthorId string             `bson:"author_id"`
-	Title    string             `bson:"title"`
-	Content  string             `bson:"content"`
+	ID       bson.ObjectID `bson:"_id,omitempty"`
+	AuthorId string        `bson:"author_id"`
+	Title    string        `bson:"title"`
+	Content  string        `bson:"content"`
 }
 
 func documentToBlog(data *BlogItem) *pb.Blog {

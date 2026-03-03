@@ -19,5 +19,7 @@ func main() {
 	defer conn.Close()
 	c := pb.NewBlogServiceClient(conn)
 
-	doCreateBlog(c)
+	// blogId := doCreateBlog(c)
+	doReadBlog(c, "69a70036310f217b409558d5")
+	// fmt.Println(blogId, "blogId...")
 }
