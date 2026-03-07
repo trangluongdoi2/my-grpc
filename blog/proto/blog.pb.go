@@ -146,7 +146,7 @@ const file_blog_proto_rawDesc = "" +
 	"\x05title\x18\x03 \x01(\tR\x05title\x12\x18\n" +
 	"\acontent\x18\x04 \x01(\tR\acontent\"\x18\n" +
 	"\x06BlogId\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id2\xf2\x01\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id2\xf4\x01\n" +
 	"\vBlogService\x12&\n" +
 	"\n" +
 	"CreateBlog\x12\n" +
@@ -155,10 +155,9 @@ const file_blog_proto_rawDesc = "" +
 	".blog.Blog\x120\n" +
 	"\n" +
 	"UpdateBlog\x12\n" +
-	".blog.Blog\x1a\x16.google.protobuf.Empty\x120\n" +
+	".blog.Blog\x1a\x16.google.protobuf.Empty\x122\n" +
 	"\n" +
-	"DeleteBlog\x12\n" +
-	".blog.Blog\x1a\x16.google.protobuf.Empty\x121\n" +
+	"DeleteBlog\x12\f.blog.BlogId\x1a\x16.google.protobuf.Empty\x121\n" +
 	"\tListBlogs\x12\x16.google.protobuf.Empty\x1a\n" +
 	".blog.Blog0\x01B.Z,github.com/trangluongdoi2/my-grpc/blog/protob\x06proto3"
 
@@ -184,7 +183,7 @@ var file_blog_proto_depIdxs = []int32{
 	0, // 0: blog.BlogService.CreateBlog:input_type -> blog.Blog
 	1, // 1: blog.BlogService.ReadBlog:input_type -> blog.BlogId
 	0, // 2: blog.BlogService.UpdateBlog:input_type -> blog.Blog
-	0, // 3: blog.BlogService.DeleteBlog:input_type -> blog.Blog
+	1, // 3: blog.BlogService.DeleteBlog:input_type -> blog.BlogId
 	2, // 4: blog.BlogService.ListBlogs:input_type -> google.protobuf.Empty
 	1, // 5: blog.BlogService.CreateBlog:output_type -> blog.BlogId
 	0, // 6: blog.BlogService.ReadBlog:output_type -> blog.Blog

@@ -12,7 +12,7 @@ import (
 )
 
 func (s *Server) CreateBlog(ctx context.Context, in *pb.Blog) (*pb.BlogId, error) {
-	log.Printf("CreateBlog function was envoke %v\n", in)
+	log.Printf("CreateBlog function was invoke %v\n", in)
 
 	data := BlogItem{
 		AuthorId: in.AuthorId,
